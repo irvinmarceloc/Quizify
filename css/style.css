@@ -1,0 +1,4 @@
+.view { display: none; }
+.view.active { display: flex; }
+.modal { display: none; }
+.modal.active { display: flex; }

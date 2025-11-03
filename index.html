@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizify Prof</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 h-screen flex">
+    <aside class="w-64 bg-white border-r p-4">
+        <h1 class="text-2xl font-bold text-blue-600 mb-6">Quizify</h1>
+        <nav class="space-y-2">
+            <button onclick="nav('view-home')" class="block w-full text-left p-2 hover:bg-gray-100 rounded">Inicio</button>
+            <button onclick="nav('view-crear')" class="block w-full text-left p-2 hover:bg-gray-100 rounded">Crear</button>
+        </nav>
+    </aside>
+    <main class="flex-1 p-8">
+        <div id="view-home" class="view active flex-col">
+            <h2 class="text-xl font-bold mb-4">Mis Cuestionarios</h2>
+            <div class="bg-white p-4 rounded shadow border">
+                <h3>Historia V1</h3>
+                <button onclick="gestionTiempo()" class="text-blue-600">Gestionar Tiempo</button>
+            </div>
+        </div>
+        <div id="view-crear" class="view flex-col">
+            <h2 class="text-xl font-bold mb-4">Nuevo Quiz</h2>
+            <input type="text" class="border p-2 w-full mb-4" placeholder="Título">
+            <button onclick="saveQuiz()" class="bg-green-600 text-white px-4 py-2 rounded">Guardar</button>
+        </div>
+    </main>
+    <script src="js/teacher.js"></script>
+</body>
+</html>
