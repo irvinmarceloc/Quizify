@@ -31,3 +31,11 @@
     <script src="js/teacher.js"></script>
 </body>
 </html>
+<div id="modal-share" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center">
+    <div class="bg-white p-6 rounded w-96">
+        <h3 class="font-bold mb-4">Compartir</h3>
+        <input id="share-email" class="border w-full p-2 mb-4" placeholder="Email">
+        <button onclick="closeModal('modal-share')" class="text-gray-500 mr-2">Cancelar</button>
+        <button onclick="invite()" class="bg-blue-600 text-white px-4 py-2 rounded">Invitar</button>
+    </div>
+</div>
