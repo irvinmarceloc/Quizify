@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><title>Student</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="p-10"><h1 class="text-2xl">Vista Alumno (Sprint 1)</h1></body>
+<head>
+    <meta charset="UTF-8">
+    <title>Quizify Alumno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-blue-600 text-white p-4 shadow">
+        <h1 class="font-bold">Quizify Student</h1>
+    </header>
+    <main class="p-6 max-w-3xl mx-auto">
+        <div id="view-home" class="view active flex-col">
+            <h2 class="text-xl font-bold mb-4">Exámenes</h2>
+            <div id="quiz-list"></div>
+        </div>
+        <div id="view-quiz" class="view flex-col">
+            <h2 class="text-xl font-bold mb-4" id="quiz-title"></h2>
+            <div id="questions-container" class="space-y-4"></div>
+            <button onclick="submit()" class="mt-6 bg-green-600 text-white px-6 py-2 rounded">Entregar</button>
+        </div>
+    </main>
+    <script src="js/student.js"></script>
+</body>
 </html>
