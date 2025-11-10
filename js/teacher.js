@@ -13,7 +13,7 @@ function openModal(id) { document.getElementById(id).classList.add('active'); }
 function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 
 // UT-1041 Logic
-function invite() { alert("Invitado"); closeModal('modal-share'); }
+function invite() { console.log("Backend call..."); alert("Invitación enviada a " + document.getElementById("share-email").value); closeModal('modal-share'); }
 
 // Fix Sprint 1 Logic
 function saveQuiz() {
