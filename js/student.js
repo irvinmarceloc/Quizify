@@ -19,3 +19,8 @@ function start(idx) {
 
 function submit() { alert("Enviado"); location.reload(); }
 init();
+// UT-1012: Monitor de longitud de respuesta
+function checkLength(id) {
+    const el = document.getElementById(id);
+    if(el) console.log("Caracteres: " + el.value.length);
+}
