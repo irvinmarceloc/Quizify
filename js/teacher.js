@@ -30,3 +30,16 @@ function runIA() {
     txt.value = "Generando...";
     setTimeout(() => { txt.value = "¿Qué es una variable? (IA)"; }, 1000);
 }
+// UT-1010: IA Mejorada (Random)
+const ia_responses = [
+    " (Versión Difícil)",
+    " (Explica con tus palabras)",
+    " (Justifica tu respuesta)",
+    " (Cita un ejemplo)"
+];
+function runSmartIA() {
+    const txt = document.getElementById('temp-q-text');
+    const randomSuffix = ia_responses[Math.floor(Math.random() * ia_responses.length)];
+    txt.value = "Generando...";
+    setTimeout(() => { txt.value = "¿" + txt.value.replace('Generando...','') + "?" + randomSuffix; }, 800);
+}
