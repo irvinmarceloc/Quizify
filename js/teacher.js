@@ -25,3 +25,8 @@ function renderDash() {
     // Render logic simple
     console.log("Render Dash");
 }
+function runIA() {
+    const txt = document.getElementById('q-text');
+    txt.value = "Generando...";
+    setTimeout(() => { txt.value = "¿Qué es una variable? (IA)"; }, 1000);
+}
