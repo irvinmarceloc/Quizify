@@ -7,18 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-gray-50 font-sans">
-    <header class="bg-blue-600 text-white p-4 shadow">
+    <header class="bg-blue-600 text-white p-4 shadow sticky top-0 z-50">
         <h1 class="font-bold">Quizify Student</h1>
     </header>
     <main class="p-6 max-w-3xl mx-auto">
         <div id="view-home" class="view active flex-col">
             <h2 class="text-xl font-bold mb-4">Exámenes</h2>
-            <div id="quiz-list"></div>
+            <div id="quiz-list" class="space-y-3"></div>
         </div>
-        <div id="view-quiz" class="view flex-col">
+        <div id="view-quiz" class="view flex-col pb-20">
+            <div class="bg-white p-4 rounded border shadow-sm sticky top-20 flex justify-between items-center mb-4">
+                <button onclick="location.reload()" class="text-gray-500">← Volver</button>
+                <span class="font-mono font-bold text-red-600">29:59</span>
+            </div>
             <h2 class="text-xl font-bold mb-4" id="quiz-title"></h2>
             <div id="questions-container" class="space-y-4"></div>
-            <button onclick="submit()" class="mt-6 bg-green-600 text-white px-6 py-2 rounded">Entregar</button>
+            <div class="mt-8 pt-4 border-t">
+                <button onclick="submit()" class="w-full bg-green-600 text-white py-3 rounded font-bold shadow">Entregar Examen</button>
+            </div>
         </div>
     </main>
     <script src="js/student.js"></script>
